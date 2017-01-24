@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.css" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to Rocio's Site </h1>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                @Html.ActionLink("Home Page", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("About Page", "About", "home")
+            </li>
+            <li>@Html.ActionLink("Add Student", "AddStudent", "Student")
+            </li>
+        </ul>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        &copy;@DateTime.Now.Year - Rocio's Website
+    </footer>
+</body>
+</html>
